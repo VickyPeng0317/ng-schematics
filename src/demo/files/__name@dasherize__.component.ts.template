@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-
+<% if (hasMock) { %>
+import { mock } from './mock.module';
+<% } %>
 @Component({
   selector: '<%= dasherize(name) %>',
   template: `<h1>Hello {{name}}!</h1>`,

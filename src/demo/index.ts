@@ -1,4 +1,4 @@
-import { Rule, SchematicContext, Tree, apply, url, template, mergeWith } from '@angular-devkit/schematics';
+import { Rule, SchematicContext, Tree, apply, url, mergeWith, applyTemplates, move } from '@angular-devkit/schematics';
 import { strings } from '@angular-devkit/core';
 
 
@@ -14,14 +14,13 @@ export function demo(_options: Schema): Rule {
 
 export function createCompoent(_options: any): Rule {
   return () => {
-    // console.log(strings);
     const templates = apply(url('./files'), [
-      template({
+      applyTemplates({
         ..._options,
         ...strings
-      })
+      }),
+      move('src/app/pages')
     ]);
-    console.log(templates.toString());
     return mergeWith(templates);
   };
 }
