@@ -1,12 +1,10 @@
 {
-  "name": "demo",
-  "version": "0.0.0",
+  "name": "@cyutsmile/demo",
+  "version": "0.0.1",
   "description": "A blank schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -p tsconfig.json --watch",
-    "sche:dev": "schematics .:demo",
-    "sche:prod": "schematics .:demo --debug=false",
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "keywords": [

@@ -6,7 +6,20 @@
   "properties": {
       "name": {
           "type": "string",
-          "x-prompt": "Enter name"
+          "x-prompt": {
+            "message": "Which name would you like?",
+            "type": "list",
+            "items": [
+              { "value": "leo",  "label": "Leo" },
+              { "value": "kevin", "label": "Kevin" },
+              { "value": "mike", "label": "Mike" },
+              { "value": "will", "label": "Will" }
+            ]
+          },
+          "$default": {
+            "$source": "argv",
+            "index": 0
+          }
       }
   },
   "required": [

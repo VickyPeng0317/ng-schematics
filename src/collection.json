@@ -5,6 +5,11 @@
       "description": "A blank schematic.",
       "factory": "./demo/index#demo",
       "schema": "./demo/schema.json"
+    },
+    "create-component": {
+      "description": "A blank schematic.",
+      "factory": "./demo/index#createCompoent",
+      "schema": "./demo/schema.json"
     }
   }
 }
