@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "title": "test input",
+  "type": "object",
+  "description": "test input",
+  "properties": {
+      "name": {
+          "type": "string",
+          "x-prompt": "Enter name"
+      }
+  },
+  "required": [
+      "name"
+  ]
+}
